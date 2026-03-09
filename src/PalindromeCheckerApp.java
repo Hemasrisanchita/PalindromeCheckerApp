@@ -23,10 +23,10 @@ public class PalindromeCheckerApp {
         System.out.println("Enter a string to check if it is a palindrome:");
         String input = scanner.nextLine();
 
-        // Normalize input: remove non-alphanumeric characters and convert to lowercase
-        input = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        // Normalize input: remove spaces and non-alphanumeric characters, convert to lowercase
+        String normalized = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 
-        if (isPalindrome(input, 0, input.length() - 1)) {
+        if (isPalindrome(normalized, 0, normalized.length() - 1)) {
             System.out.println("The string is a palindrome!");
         } else {
             System.out.println("The string is NOT a palindrome!");
